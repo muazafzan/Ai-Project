@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyOWFgr3OC0O/UQ7Bqf56WTk",
+      "authorship_tag": "ABX9TyNLewcsb5Mf87VkXH7k6Vtp",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -28,21 +28,20 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 9,
+      "execution_count": null,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
         "id": "pKihKCcCSfua",
-        "outputId": "9f65185a-ef3e-4d52-e4c3-d06cd351e10c"
+        "outputId": "2ebee3bf-97be-4353-cf55-3befe9d51fa9"
       },
       "outputs": [
         {
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "Hi! How can I help you? / Apa yang boleh saya bantu? cuaca\n",
-            "Cuaca hari ini cerah!\n"
+            "Hi! I'm Bobot. / Hai! Saya Bobot.\n"
           ]
         }
       ],
@@ -54,27 +53,28 @@
         "months_ms = [\"Januari\", \"Februari\", \"Mac\", \"April\", \"Mei\", \"Jun\",\n",
         "             \"Julai\", \"Ogos\", \"September\", \"Oktober\", \"November\", \"Disember\"]\n",
         "\n",
-        "user = input(\"Hi! How can I help you? / Apa yang boleh saya bantu? \").lower()\n",
+        "print(\"Hi! I'm Bobot. / Hai! Saya Bobot.\")\n",
+        "user = input(\"How can I help you? / Apa yang boleh saya bantu? \").lower()\n",
         "now = datetime.now(ZoneInfo(\"Asia/Kuala_Lumpur\"))\n",
         "\n",
         "# English\n",
         "if \"weather\" in user:\n",
-        "    print(\"The weather today is sunny!\")\n",
+        "    print(\"Bobot: The weather today is sunny!\")\n",
         "elif \"time\" in user:\n",
-        "    print(\"The current time is\", now.strftime(\"%I:%M %p\"))\n",
+        "    print(\"Bobot: The current time is\", now.strftime(\"%I:%M %p\"))\n",
         "elif \"date\" in user:\n",
-        "    print(\"Today's date is\", now.strftime(\"%A, %d %B %Y\"))\n",
+        "    print(\"Bobot: Today's date is\", now.strftime(\"%A, %d %B %Y\"))\n",
         "\n",
         "# Malay\n",
         "elif \"cuaca\" in user:\n",
-        "    print(\"Cuaca hari ini cerah!\")\n",
+        "    print(\"Bobot: Cuaca hari ini cerah!\")\n",
         "elif \"masa\" in user or \"waktu\" in user or \"pukul\" in user or \"jam\" in user:\n",
-        "    print(\"Masa sekarang ialah\", now.strftime(\"%I:%M %p\"))\n",
+        "    print(\"Bobot: Masa sekarang ialah\", now.strftime(\"%I:%M %p\"))\n",
         "elif \"tarikh\" in user or \"tanggal\" in user:\n",
-        "    print(f\"Tarikh hari ini ialah {days_ms[now.weekday()]}, {now.day} {months_ms[now.month - 1]} {now.year}\")\n",
+        "    print(f\"Bobot: Tarikh hari ini ialah {days_ms[now.weekday()]}, {now.day} {months_ms[now.month - 1]} {now.year}\")\n",
         "\n",
         "else:\n",
-        "    print(\"Sorry, I don't understand. / Maaf, saya tidak faham.\")"
+        "    print(\"Bobot: Sorry, I don't understand. / Maaf, saya tidak faham.\")"
       ]
     }
   ]
